@@ -4,14 +4,17 @@
 
 腾亿安全盾是给 Linux Web 服务器用的 CC / HTTP 洪水防火墙。
 
-> **Alpha 版。** 0.0.0.1 是第一个社区版，请先在不重要的服务器上试用。
+> **Alpha 版。** 请先在不重要的服务器上试用。
 
 ## 功能
 
 - **黑白名单**
 - **驱动防护**
 - **支持 HTTP 与 HTTPS 防护**
+- **SYN 防护**
+- **TCP 与 UDP Flood 防护**
 - **自动防护**
+- **抓包**
 - **管理后台**
 
 ## 支持的系统
@@ -22,6 +25,7 @@
 |---|---|---|
 | Ubuntu 26.04 | 7.0.0-38-generic | `.deb` |
 | Ubuntu 24.04（HWE 内核） | 7.0.0-38-generic | `.deb` |
+| Ubuntu 24.04（GA 内核） | 6.8.0-147-generic | `.deb` |
 | Debian 13 | 6.12.107+deb13-amd64 | `.deb` |
 | Rocky Linux 10 | 6.12.0-211.68.1.el10_2.x86_64 | `.rpm` |
 
@@ -38,7 +42,7 @@
 **Ubuntu / Debian**
 
 ```sh
-sudo apt install ./ssfwl_0.0.0.1_amd64.deb
+sudo apt install ./ssfwl_0.0.0.2_amd64.deb
 ```
 
 安装时会问管理后台端口，直接回车用默认的 8800。
@@ -46,7 +50,7 @@ sudo apt install ./ssfwl_0.0.0.1_amd64.deb
 **Rocky Linux**
 
 ```sh
-sudo dnf install ./ssfwl-0.0.0.1-1.el10.x86_64.rpm
+sudo dnf install ./ssfwl-0.0.0.2-1.el10.x86_64.rpm
 ```
 
 管理后台端口为 8800。开着 firewalld 时，安装完会打印放行端口的命令。

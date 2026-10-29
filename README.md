@@ -4,14 +4,17 @@
 
 TENY SafeShield is a CC / HTTP flood firewall for Linux web servers.
 
-> **Alpha.** 0.0.0.1 is the first community release. Test it on a non-critical server first.
+> **Alpha.** Test it on a non-critical server first.
 
 ## Features
 
 - **Blacklist and whitelist**
 - **Driver-level protection**
 - **HTTP and HTTPS protection**
+- **SYN protection**
+- **TCP and UDP flood protection**
 - **Automatic protection**
+- **Packet capture**
 - **Web console**
 
 ## Supported systems
@@ -22,6 +25,7 @@ The driver is prebuilt for each kernel. **Only the kernels below are supported**
 |---|---|---|
 | Ubuntu 26.04 | 7.0.0-38-generic | `.deb` |
 | Ubuntu 24.04 (HWE kernel) | 7.0.0-38-generic | `.deb` |
+| Ubuntu 24.04 (GA kernel) | 6.8.0-147-generic | `.deb` |
 | Debian 13 | 6.12.107+deb13-amd64 | `.deb` |
 | Rocky Linux 10 | 6.12.0-211.68.1.el10_2.x86_64 | `.rpm` |
 
@@ -38,7 +42,7 @@ Download the package for your system from the [latest release](../../releases/la
 **Ubuntu / Debian**
 
 ```sh
-sudo apt install ./ssfwl_0.0.0.1_amd64.deb
+sudo apt install ./ssfwl_0.0.0.2_amd64.deb
 ```
 
 The installer asks for the console port; press Enter for the default 8800.
@@ -46,7 +50,7 @@ The installer asks for the console port; press Enter for the default 8800.
 **Rocky Linux**
 
 ```sh
-sudo dnf install ./ssfwl-0.0.0.1-1.el10.x86_64.rpm
+sudo dnf install ./ssfwl-0.0.0.2-1.el10.x86_64.rpm
 ```
 
 The console port is 8800. If firewalld is running, the installer prints the command that opens the port.
